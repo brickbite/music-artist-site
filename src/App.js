@@ -10,7 +10,7 @@ class App extends Component {
     super()
 
     this.state = {
-      artist: `Big Sean`,
+      artist: `Big Dan`,
       promoVideo: ``,
       tours: [
         {
