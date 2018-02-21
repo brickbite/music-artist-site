@@ -22,7 +22,10 @@ class SetlistTrack extends Component {
             <h1 className="SetlistTrack-title">Track Title</h1>
           </header> */}
           <div className="SetlistTrack-intro">
-            <input type="checkbox" onChange={() => this.props.selectTrack(`${this.props.album}-${this.props.track}`)}/>
+            <input type="checkbox" onClick={(event) => {
+              console.log(event.target.checked);
+              this.props.selectTrack(`${this.props.album}-${this.props.track}`)
+            }}/>
             <span>{this.props.track}</span>
           </div>
         </div>
