@@ -62,16 +62,19 @@ class Setlist extends Component {
     if (this.state.nameField === ``) {
       console.log(`Name is required`);
     } else if (this.state.emailField === ``) {
-      // TODO: check for valid email address
       console.log(`Email is required`);
+    // TODO: check for valid email address
+    // } else if (this.state.emailField === ``) {
+      // console.log(`Please enter a valid email`);
     } else if (this.state.tourField === ``) {
-      console.log(`please select a tour`);
+      console.log(`Please select a tour`);
     } else {
+      // TODO: clear selected items
       this.setState({
         nameField: ``,
         emailField: ``,
         tourField: ``
-      }, () => console.log(`submitted, resetting name/email`));   
+      }, () => console.log(`submitted, resetting fields`));   
     } 
   }
 
