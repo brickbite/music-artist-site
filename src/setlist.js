@@ -10,7 +10,7 @@ class Setlist extends Component {
       emailField: ``,
       tourField: ``,
       tracks: [], // TODO: find better way of organizing objects
-      selected: 0
+      countSelected: 0
     }
   }
   
@@ -19,7 +19,7 @@ class Setlist extends Component {
     const tracks = [];
     this.props.albums.map(album => {
       return album.tracks.map(track => {
-        const obj = {}
+        const obj = {};
         obj.title = `${album.title}-${track}`;
         obj.selected = false;
         return tracks.push(obj);
@@ -32,16 +32,23 @@ class Setlist extends Component {
 
   selectTrack = (val) => {
     // TODO: check for counter of # of selected items
-    console.log(`selected ${val}`);
+    // console.log(`selected ${val}`);
     const newTracks = this.state.tracks;
+    let newCount = 0;
     for (let i = 0; i < newTracks.length; i++) {
       if (newTracks[i].title === val) {
         newTracks[i].selected = !newTracks[i].selected;
+        if (newTracks[i].selected) {
+          newCount++
+        }
       } else {
+        if (newTracks[i].selected) {
+          newCount++
+        }
         continue;
       }
     }
-    this.setState({tracks: newTracks});
+    this.setState({tracks: newTracks, countSelected: newCount}, () => console.log(`${this.state.countSelected}/5 selected`));
   }
 
   updateField = (value, field) => {
