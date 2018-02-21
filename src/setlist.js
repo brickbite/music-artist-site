@@ -33,8 +33,8 @@ class Setlist extends Component {
     console.log(`selected ${val}`);
     const newTracks = this.state.tracks;
     for (let i = 0; i < newTracks.length; i++) {
-      if (Object.keys(newTracks[i])[0] === val) {
-        newTracks[i][Object.keys(newTracks[i])[0]] = !newTracks[i][Object.keys(newTracks[i])[0]]
+      if (newTracks[i].hasOwnProperty(val)) {
+        newTracks[i][val] = !newTracks[i][val]
       } else {
         continue;
       }
@@ -51,12 +51,12 @@ class Setlist extends Component {
 
   submitSetlist = () => {
     if (this.state.nameField === ``) {
-      console.log(`please enter name!`);
+      console.log(`Name is required`);
     } else if (this.state.emailField === ``) {
       // TODO: check for valid email address
-      console.log(`please enter email!`);
+      console.log(`Email is required`);
     } else if (this.state.tourField === ``) {
-      console.log(`please select a tour!`);
+      console.log(`please select a tour`);
     } else {
       this.setState({
         nameField: ``,
@@ -83,6 +83,7 @@ class Setlist extends Component {
 
           <div className="Setlist-selected">
             <h3>Selected Tracks (Select up to 5)</h3>
+            {/* TODO: make prettier */}
             {this.state.tracks.map(el => el[Object.keys(el)[0]] ? <div key={Object.keys(el)[0]}>{Object.keys(el)[0]}</div> : null)}
           </div>
 
