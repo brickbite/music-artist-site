@@ -9,7 +9,8 @@ class Setlist extends Component {
       nameField: ``,
       emailField: ``,
       tourField: ``,
-      tracks: [] // TODO: find better way of organizing objects
+      tracks: [], // TODO: find better way of organizing objects
+      selected: 0
     }
   }
   
@@ -19,7 +20,8 @@ class Setlist extends Component {
     this.props.albums.map(album => {
       return album.tracks.map(track => {
         const obj = {}
-        obj[`${album.title}-${track}`] = false
+        obj.title = `${album.title}-${track}`;
+        obj.selected = false;
         return tracks.push(obj);
       });
     });
@@ -33,8 +35,8 @@ class Setlist extends Component {
     console.log(`selected ${val}`);
     const newTracks = this.state.tracks;
     for (let i = 0; i < newTracks.length; i++) {
-      if (newTracks[i].hasOwnProperty(val)) {
-        newTracks[i][val] = !newTracks[i][val]
+      if (newTracks[i].title === val) {
+        newTracks[i].selected = !newTracks[i].selected;
       } else {
         continue;
       }
@@ -83,8 +85,7 @@ class Setlist extends Component {
 
           <div className="Setlist-selected">
             <h3>Selected Tracks (Select up to 5)</h3>
-            {/* TODO: make prettier */}
-            {this.state.tracks.map(el => el[Object.keys(el)[0]] ? <div key={Object.keys(el)[0]}>{Object.keys(el)[0]}</div> : null)}
+            {this.state.tracks.map(el => el.selected ? <div key={el.title}>{el.title}</div> : null)}
           </div>
 
           <div className="Setlist-form">
