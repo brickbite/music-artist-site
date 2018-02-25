@@ -68,7 +68,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <h1>
+          <h1 className="App-Header">
             <Link to="/">{this.state.artist}</Link>
             <span> | </span>
             <Link to="/">Tour</Link>
