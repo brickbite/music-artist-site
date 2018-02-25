@@ -87,7 +87,7 @@ class App extends Component {
             <Route path="/404" component={() => <div>404: Not Found</div>} />
           </Switch>
 
-          <p>ć2018 {this.state.artist}</p>
+          <p className="App-Footer">ć2018 {this.state.artist}</p>
         </div>
       </Router>
     );
