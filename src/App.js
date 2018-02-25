@@ -58,6 +58,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log(`App didMount`);
+    // TODO: (if needed) fetch assets and update state as needed
   }
 
   submitVote = (val) => {
