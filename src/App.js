@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import './App.css';
+import './app.css';
 import Home from './home';
 import Music from './music';
 import Setlist from './setlist';
