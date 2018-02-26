@@ -35,3 +35,9 @@
   grid-template-columns: 33% 33% 33%;
   align-items: center;
 }
+
+.Music-Entry-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  align-items: center;
+}

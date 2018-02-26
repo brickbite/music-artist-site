@@ -34,7 +34,9 @@ class Music extends Component {
             <p>Social Icons</p>
           </div>
           <h3>Listen</h3>
+          <div className="Music-Entry-Container">
           {this.props.albums.map(el => <div key={el.title} onClick={() => this.changeAlbum(el)}>{el.title}</div>)}
+          </div>
         </div>
     );
   }
