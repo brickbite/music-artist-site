@@ -74,7 +74,7 @@ class App extends Component {
             <Link to="/">Tour</Link>
             <Link to="/music">Music</Link>
             <Link to="/choose-setlist">Choose Setlist</Link>
-            <a href="https://www.google.com">Store</a>
+            <a href="#">Store</a>
           </h1>
 
           <Switch>
