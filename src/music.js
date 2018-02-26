@@ -5,7 +5,20 @@ class Music extends Component {
     super(props)
 
     this.state = {
-      currentAlbum: { title: ``, tracks: [] }
+      // TODO: Combine currentAlbum and currentPlayer
+      currentAlbum: {
+        title: ``,
+        tracks: []
+      },
+      currentPlayer: {
+        spotifyEmbed: ``,
+        linkApple: `#Apple`,
+        linkSpotify: `#Spotify`,
+        linkAmazon: `#Amazon-Music`,
+        linkTidal: `#Tidal`,
+        linkGoogle: `#Google-Play`,
+        linkSoundCloud: `#SoundCloud`,
+      }
     }
   }
   
@@ -34,12 +47,12 @@ class Music extends Component {
               <iframe src="https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3"
                 width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               <div>
-                <a href="#">Apple</a>
-                <a href="#">Spotify</a>
-                <a href="#">Amazon Music</a>
-                <a href="#">Tidal</a>
-                <a href="#">Google Play</a>
-                <a href="#">SoundCloud</a>
+                <a href={this.state.currentPlayer.linkApple}>Apple</a>
+                <a href={this.state.currentPlayer.linkSpotify}>Spotify</a>
+                <a href={this.state.currentPlayer.linkAmazon}>Amazon Music</a>
+                <a href={this.state.currentPlayer.linkTidal}>Tidal</a>
+                <a href={this.state.currentPlayer.linkGoogle}>Google Play</a>
+                <a href={this.state.currentPlayer.linkSoundCloud}>SoundCloud</a>
               </div>
             </div>
           </div>
