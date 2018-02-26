@@ -12,6 +12,9 @@
   height: 150px;
   padding: 20px;
   color: white;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  align-items: center;
 }
 
 .App-title {

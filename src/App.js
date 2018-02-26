@@ -70,14 +70,10 @@ class App extends Component {
       <Router>
         <div>
           <h1 className="App-Header">
-            <Link to="/" className="App-Header">{this.state.artist}</Link>
-            <span className="App-Header"> | </span>
-            <Link to="/" className="App-Header">Tour</Link>
-            <span className="App-Header"> | </span>
-            <Link to="/music" className="App-Header">Music</Link>
-            <span className="App-Header"> | </span>
-            <Link to="/choose-setlist" className="App-Header">Choose Setlist</Link>
-            <span className="App-Header"> | </span>
+            <Link to="/">{this.state.artist}</Link>
+            <Link to="/">Tour</Link>
+            <Link to="/music">Music</Link>
+            <Link to="/choose-setlist">Choose Setlist</Link>
             <a href="https://www.google.com">Store</a>
           </h1>
 
