@@ -11,7 +11,7 @@ class Music extends Component {
         tracks: []
       },
       currentPlayer: {
-        spotifyEmbed: ``,
+        spotifyEmbed: `https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3`,
         linkApple: `#Apple`,
         linkSpotify: `#Spotify`,
         linkAmazon: `#Amazon-Music`,
@@ -44,14 +44,24 @@ class Music extends Component {
             <div className="Current-Album-Art">Featured Album Coverart</div>
             <div className="Current-Player-Social">
               <div>Currently Listening to: {this.state.currentAlbum.title}</div>
-              <iframe src="https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3"
+              <iframe src={this.state.currentPlayer.spotifyEmbed}
                 width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               <div>
-                <a href={this.state.currentPlayer.linkApple}><img src="#"/>Apple</a>
-                <a href={this.state.currentPlayer.linkSpotify}><img src="#"/>Spotify</a>
-                <a href={this.state.currentPlayer.linkAmazon}><img src="#"/>Amazon Music</a>
-                <a href={this.state.currentPlayer.linkTidal}><img src="#"/>Tidal</a>
-                <a href={this.state.currentPlayer.linkGoogle}><img src="#"/>Google Play</a>
+                <a href={this.state.currentPlayer.linkApple}>
+                  <img src="#"/>Apple
+                </a>
+                <a href={this.state.currentPlayer.linkSpotify}>
+                  <img src="#"/>Spotify
+                </a>
+                <a href={this.state.currentPlayer.linkAmazon}>
+                  <img src="#"/>Amazon Music
+                </a>
+                <a href={this.state.currentPlayer.linkTidal}>
+                  <img src="#"/>Tidal
+                </a>
+                <a href={this.state.currentPlayer.linkGoogle}>
+                  <img src="#"/>Google Play
+                </a>
                 <a href={this.state.currentPlayer.linkSoundCloud}><img src="#"/>SoundCloud</a>
               </div>
             </div>
