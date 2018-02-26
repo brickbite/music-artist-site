@@ -41,3 +41,7 @@
   grid-template-columns: repeat(auto-fit, 100px);
   align-items: center;
 }
+
+.App-Footer {
+  text-align: center;
+}
