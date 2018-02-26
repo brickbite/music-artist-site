@@ -31,11 +31,20 @@ class Music extends Component {
             <p>Featured Album Coverart</p>
             <p>Featured Album Title</p>
             <p>Spotify Embed</p>
-            <p>Social Icons</p>
+            <iframe src="https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3"
+              width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div>
+              <a href="#">Apple</a>
+              <a href="#">Spotify</a>
+              <a href="#">Amazon Music</a>
+              <a href="#">Tidal</a>
+              <a href="#">Google Play</a>
+              <a href="#">SoundCloud</a>
+            </div>
           </div>
           <h3>Listen</h3>
           <div className="Music-Entry-Container">
-          {this.props.albums.map(el => <div key={el.title} onClick={() => this.changeAlbum(el)}>{el.title}</div>)}
+          {this.props.albums.map(el => <div className="Music-Entry" key={el.title} onClick={() => this.changeAlbum(el)}>{el.title}</div>)}
           </div>
         </div>
     );

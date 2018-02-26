@@ -36,10 +36,18 @@
   align-items: center;
 }
 
+.Music {
+  background-color: grey;
+}
+
 .Music-Entry-Container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, 200px);
   align-items: center;
+}
+
+.Music-Entry:hover {
+  background-color: white;
 }
 
 .App-Footer {
