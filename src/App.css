@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.HomeEntry {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;
+}
