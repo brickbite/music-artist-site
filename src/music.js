@@ -26,20 +26,21 @@ class Music extends Component {
           <header className="Music-header">
             <h1 className="Music-title">Music Page</h1>
           </header>
-          <div className="Music-intro">Currently Listening to: {this.state.currentAlbum.title}</div>
-          <div className="Music-player">
-            <p>Featured Album Coverart</p>
-            <p>Featured Album Title</p>
-            <p>Spotify Embed</p>
-            <iframe src="https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3"
-              width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <div>
-              <a href="#">Apple</a>
-              <a href="#">Spotify</a>
-              <a href="#">Amazon Music</a>
-              <a href="#">Tidal</a>
-              <a href="#">Google Play</a>
-              <a href="#">SoundCloud</a>
+          <div className="Music-intro"></div>
+          <div className="Music-Player">
+            <div className="Current-Album-Art">Featured Album Coverart</div>
+            <div className="Current-Player-Social">
+              <div>Currently Listening to: {this.state.currentAlbum.title}</div>
+              <iframe src="https://open.spotify.com/embed/album/4gqnsOwnA490OYq58VfJV3"
+                width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <div>
+                <a href="#">Apple</a>
+                <a href="#">Spotify</a>
+                <a href="#">Amazon Music</a>
+                <a href="#">Tidal</a>
+                <a href="#">Google Play</a>
+                <a href="#">SoundCloud</a>
+              </div>
             </div>
           </div>
           <h3>Listen</h3>

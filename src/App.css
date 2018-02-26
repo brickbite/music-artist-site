@@ -40,6 +40,11 @@
   background-color: grey;
 }
 
+.Music-Player {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+}
+
 .Music-Entry-Container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
