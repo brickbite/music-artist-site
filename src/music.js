@@ -45,7 +45,15 @@ class Music extends Component {
           </div>
           <h3>Listen</h3>
           <div className="Music-Entry-Container">
-          {this.props.albums.map(el => <div className="Music-Entry" key={el.title} onClick={() => this.changeAlbum(el)}>{el.title}</div>)}
+          {this.props.albums.map(el => {
+            return (
+              <div className="Music-Entry" key={el.title} onClick={() => this.changeAlbum(el)}>
+                <img className="Music-Entry-Image" src="#"/>
+                <div className="Music-Entry-Title">{el.title}</div>
+              
+              </div>
+            )
+          })}
           </div>
         </div>
     );
