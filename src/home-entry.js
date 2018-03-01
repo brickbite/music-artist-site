@@ -18,15 +18,15 @@ class HomeEntry extends Component {
     return (
         <div className="HomeEntry">
           <header className="HomeEntry-header">
-            <h1 className="HomeEntry-date">{this.props.tour.date}</h1>
+            <h1 className="HomeEntry-Date">{this.props.tour.date}</h1>
           </header>
-          <div className="HomeEntry-venue">
-            <p>{this.props.tour.city}</p>
-            <p>{this.props.tour.venue}</p>
+          <div className="HomeEntry-Venue">
+            <div className="HomeEntry-City">{this.props.tour.city}</div>
+            <div className="HomeEntry-Venue">{this.props.tour.venue}</div>
           </div>
-          <div className="HomeEntry-actions">
-            <p><button onClick={() => console.log(`redirecting to ticketmaster`)}>Tickets + VIP</button></p>
-            <p><Link to="/choose-setlist">Choose Setlist</Link></p>
+          <div className="HomeEntry-Action-Container">
+            <div><button className="HomeEntry-Action" onClick={() => console.log(`redirecting to ticketmaster`)}>Tickets + VIP</button></div>
+            <div><Link className="HomeEntry-Action" to="/choose-setlist">Choose Setlist</Link></div>
           </div>
         </div>
     );

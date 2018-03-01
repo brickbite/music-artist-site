@@ -41,28 +41,32 @@ class Music extends Component {
           </header>
           <div className="Music-intro"></div>
           <div className="Music-Player">
-            <div className="Current-Album-Art">Featured Album Coverart</div>
+            <img className="Current-Album-Art"
+              src="assets/cover_dark-sky-paradise.jpg">
+            </img>
             <div className="Current-Player-Social">
               <div>Currently Listening to: {this.state.currentAlbum.title}</div>
               <iframe src={this.state.currentPlayer.spotifyEmbed}
-                width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-              <div>
-                <a href={this.state.currentPlayer.linkApple}>
-                  <img src="#"/>Apple
+                width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <div className="Social-Container">
+                <a className="Social-Apple"
+                  href={this.state.currentPlayer.linkApple}>
                 </a>
-                <a href={this.state.currentPlayer.linkSpotify}>
-                  <img src="#"/>Spotify
+                <a className="Social-Spotify"
+                  href={this.state.currentPlayer.linkSpotify}>
                 </a>
-                <a href={this.state.currentPlayer.linkAmazon}>
-                  <img src="#"/>Amazon Music
+                <a className="Social-Amazon"
+                  href={this.state.currentPlayer.linkAmazon}>
                 </a>
-                <a href={this.state.currentPlayer.linkTidal}>
-                  <img src="#"/>Tidal
+                <a className="Social-Tidal"
+                  href={this.state.currentPlayer.linkTidal}>
                 </a>
-                <a href={this.state.currentPlayer.linkGoogle}>
-                  <img src="#"/>Google Play
+                <a className="Social-Google"
+                  href={this.state.currentPlayer.linkGoogle}>
                 </a>
-                <a href={this.state.currentPlayer.linkSoundCloud}><img src="#"/>SoundCloud</a>
+                <a className="Social-SoundCloud"
+                  href={this.state.currentPlayer.linkSoundCloud}>
+                </a>
               </div>
             </div>
           </div>
@@ -72,8 +76,11 @@ class Music extends Component {
             return (
               <div className="Music-Entry" key={el.title} onClick={() => this.changeAlbum(el)}>
                 <img className="Music-Entry-Image" src="#"/>
-                <div className="Music-Entry-Title">{el.title}</div>
-              
+                <div className="Music-Entry-Title">
+                  {el.title}
+                  <div className="Music-Entry-Action">listen</div>
+                </div>
+                
               </div>
             )
           })}

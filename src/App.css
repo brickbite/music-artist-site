@@ -25,9 +25,18 @@
   font-size: large;
 }
 
+.App-Footer {
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+.Home {
+  background-color: grey;
 }
 
 .HomeEntry {
@@ -35,6 +44,21 @@
   grid-template-columns: 33% 33% 33%;
   align-items: center;
 }
+.HomeEntry-City {
+  font-size: 1.5em;
+}
+
+.HomeEntry-Action {
+  border-style: solid;
+  border-radius: 1px;
+}
+
+
+
+
+
+
+
 
 .Music {
   background-color: grey;
@@ -42,19 +66,140 @@
 
 .Music-Player {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 500px);
 }
 
 .Music-Entry-Container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, 250px);
   align-items: center;
 }
 
-.Music-Entry:hover {
-  background-color: white;
+.Music-Entry {
+  min-height: 250px;
+  min-width: 250px;
 }
 
-.App-Footer {
+.Music-Entry-Image {
+  position: absolute;
+  min-height: 250px;
+  min-width: 250px;
+}
+
+.Music-Entry-Title {
+  position: absolute;
+  opacity: 0;
+  min-height: 250px;
+  min-width: 250px;
   text-align: center;
+}
+
+.Music-Entry-Title:hover {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  min-height: 250px;
+  min-width: 250px;
+  text-align: center;
+}
+
+.Music-Entry-Action {
+  border-style: solid;
+  border-radius: 1px;
+}
+
+
+.Current-Album-Art {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+.Social-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35px);
+  align-items: center;
+}
+
+.Social-Entry {
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-Apple {
+  background-image: url("assets/apple.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-Spotify {
+  background-image: url("assets/spotify.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-Amazon {
+  background-image: url("assets/amazon-music.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-Tidal {
+  background-image: url("assets/tidal.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-Google {
+  background-image: url("assets/google-play.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
+}
+
+.Social-SoundCloud {
+  background-image: url("assets/soundcloud.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: both;
+  min-height: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  margin: 0px 5px 0px 5px;
 }
