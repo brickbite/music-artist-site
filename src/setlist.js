@@ -81,10 +81,10 @@ class Setlist extends Component {
   render() {
     return (
         <div className="Setlist">
-          <header className="Setlist-header">
-            <h1 className="Setlist-title">Setlist Stuff</h1>
+          <header className="Setlist-Header">
+            <h1 className="Setlist-Title">Setlist Stuff</h1>
           </header>
-          <p className="Setlist-intro">
+          <p className="Setlist-Intro">
             Setlist Page
           </p>
           {this.props.albums.map((el) => {
@@ -93,12 +93,12 @@ class Setlist extends Component {
             );
           })}
 
-          <div className="Setlist-selected">
+          <div className="Setlist-Selected">
             <h3>Selected Tracks (Select up to 5)</h3>
             {this.state.tracks.map(el => el.selected ? <div key={el.title}>{el.title}</div> : null)}
           </div>
 
-          <div className="Setlist-form">
+          <div className="Setlist-Form">
             <h3>Submit</h3>
             <input type="textbox" placeholder="name" value={this.state.nameField} onChange={(e) => this.updateField(e.target.value, `nameField`)}/>
             <input type="textbox" placeholder="e-mail address" value={this.state.emailField} onChange={(e) => this.updateField(e.target.value, `emailField`)}/>
