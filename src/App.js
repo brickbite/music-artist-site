@@ -16,7 +16,7 @@ class App extends Component {
         {
           date: `2018.02.21`,
           city: `Culver City, CA`,
-          venue: `House of Blues`
+          venue: `House of Blue`
         },
         {
           date: `2018.02.23`,
@@ -26,12 +26,12 @@ class App extends Component {
         {
           date: `2018.02.25`,
           city: `San Francisco, CA`,
-          venue: `Hard Rock Cafe`
+          venue: `Soft Rock Cafe`
         },
         {
           date: `2018.02.28`,
           city: `Santa Monica, CA`,
-          venue: `Lively Venue`
+          venue: `Live Perf Venue`
         }
       ],
       albums: [
