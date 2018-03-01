@@ -49,22 +49,22 @@ class Music extends Component {
               <iframe src={this.state.currentPlayer.spotifyEmbed}
                 width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               <div className="Social-Container">
-                <a className="Social-Apple"
+                <a className="Social-Entry Social-Apple"
                   href={this.state.currentPlayer.linkApple}>
                 </a>
-                <a className="Social-Spotify"
+                <a className="Social-Entry Social-Spotify"
                   href={this.state.currentPlayer.linkSpotify}>
                 </a>
-                <a className="Social-Amazon"
+                <a className="Social-Entry Social-Amazon"
                   href={this.state.currentPlayer.linkAmazon}>
                 </a>
-                <a className="Social-Tidal"
+                <a className="Social-Entry Social-Tidal"
                   href={this.state.currentPlayer.linkTidal}>
                 </a>
-                <a className="Social-Google"
+                <a className="Social-Entry Social-Google"
                   href={this.state.currentPlayer.linkGoogle}>
                 </a>
-                <a className="Social-SoundCloud"
+                <a className="Social-Entry Social-SoundCloud"
                   href={this.state.currentPlayer.linkSoundCloud}>
                 </a>
               </div>
